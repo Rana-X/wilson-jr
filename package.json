@@ -9,9 +9,14 @@
     "lint": "next lint",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
-    "test:headed": "playwright test --headed"
+    "test:headed": "playwright test --headed",
+    "db:test": "node database/test-connection.js",
+    "db:migrate": "node database/migrate.js",
+    "db:seed": "node database/migrate.js --seed",
+    "db:reset": "node database/migrate.js --reset --seed"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.9.0",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-scroll-area": "^1.2.10",
@@ -19,6 +24,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.548.0",
     "next": "^14.2.0",
